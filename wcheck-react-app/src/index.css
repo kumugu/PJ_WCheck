@@ -1,0 +1,71 @@
+.app-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 14px;
+  font-size: 16px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.delete-btn {
+  background: #e53935;
+  margin-left: 10px;
+}
+
+ul.checklist {
+  list-style: none;
+  padding: 0;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.checklist-item.checked span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    max-width: 98vw;
+    margin: 10px;
+    padding: 8px;
+  }
+  button {
+    font-size: 14px;
+    padding: 7px 10px;
+  }
+}

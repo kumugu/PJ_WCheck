@@ -1,0 +1,201 @@
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: white;
+  min-height: 100vh;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  font-family: "Segoe UI", "Apple SD Gothic Neo", sans-serif;
+}
+
+h1 {
+  color: #1e88e5;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.date-selector {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.date-selector input[type="date"] {
+  padding: 0.5rem 1.2rem;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1e88e5;
+  background: #f7fafd;
+  font-weight: 600;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls button {
+  padding: 0.65rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.controls button:first-child {
+  background: linear-gradient(135deg, #1e88e5, #1976d2);
+  color: white;
+}
+
+.controls button:nth-child(2) {
+  background: linear-gradient(135deg, #d32f2f, #c62828);
+  color: white;
+}
+
+.stats {
+  background: linear-gradient(135deg, #1e88e5, #1976d2);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(30,136,229,0.12);
+}
+
+.time-block {
+  margin-bottom: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.2rem;
+  background: #fafafa;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  animation: slideIn 0.5s ease;
+}
+
+.time-block h2 {
+  color: #333;
+  margin-top: 0;
+  border-bottom: 3px solid #1e88e5;
+  padding-bottom: 0.5rem;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.task {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  border-left: 4px solid #1e88e5;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+  animation: slideIn 0.5s ease;
+}
+
+.task.completed {
+  background: #f1f8e9;
+  border-left-color: #4caf50;
+}
+
+.task label {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.task input[type="checkbox"] {
+  margin-right: 0.75rem;
+  margin-top: 0.2rem;
+  transform: scale(1.2);
+  accent-color: #1e88e5;
+}
+
+.task input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  color: #666;
+  opacity: 0.7;
+  animation: checkComplete 0.5s ease;
+}
+
+.notes {
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.92rem;
+  resize: vertical;
+  min-height: 54px;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+.notes:focus {
+  outline: none;
+  border-color: #1e88e5;
+  box-shadow: 0 0 0 3px rgba(30,136,229,0.08);
+}
+
+.notes::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    max-width: 98vw;
+    padding: 0.7rem;
+    margin: 0;
+    border-radius: 0;
+  }
+  .controls {
+    gap: 0.5rem;
+  }
+  .controls button {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.9rem;
+  }
+  .stats {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.7rem;
+    border-radius: 12px;
+  }
+  h1 {
+    font-size: 1.3rem;
+    margin-bottom: 1.1rem;
+  }
+  .time-block {
+    padding: 0.8rem;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes checkComplete {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
