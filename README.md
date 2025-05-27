@@ -29,7 +29,7 @@ React와 PWA(Progressive Web App) 기술로 제작되어,
 ## 사용 방법
 
 1. **웹 접속**  
-   배포된 URL(`https://pj-w-check.vercel.app/`) 또는 로컬에서 실행 (`npm start`)
+   배포된 [https://pj-w-check.vercel.app](https://pj-w-check.vercel.app/) 또는 로컬에서 실행 (`npm start`) 으로 확인할 수 있습니다.
 
 2. **날짜 선택**  
    상단의 날짜 선택창에서 원하는 날짜를 선택
