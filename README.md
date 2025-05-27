@@ -1,6 +1,6 @@
 # WORKCHECK - 야간 업무 체크리스트
 
-![WorkCheck Icon](public/workcheck.png)
+![WorkCheck Icon](/workcheck.png)
 
 **WORKCHECK**는 야간 운영 업무를 위한 개인용 체크리스트 앱입니다.  
 React와 PWA(Progressive Web App) 기술로 제작되어,  
